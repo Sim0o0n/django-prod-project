@@ -1,14 +1,14 @@
 version: "3.9"
 
 volumes:
-  db_data: {}  # volume для SQLite
+  db_data: {}
 
 services:
   web:
     build: .
     container_name: django_app
     ports:
-      - "8003:8003"
+      - "8000:8000"
     environment:
       - DJANGO_DEBUG=1
     volumes:

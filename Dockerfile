@@ -9,6 +9,6 @@ RUN pip install --no-cache-dir pipenv && \
 
 COPY mysite/ ./mysite/
 
-EXPOSE 8003
+EXPOSE 8000
 
-CMD ["sh", "-c", "python mysite/manage.py migrate && python mysite/manage.py runserver 0.0.0.0:8003"]
+CMD ["sh", "-c", "python mysite/manage.py migrate && python mysite/manage.py runserver 0.0.0.0:8000"]
