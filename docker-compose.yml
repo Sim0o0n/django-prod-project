@@ -8,4 +8,6 @@ services:
       - "8000:8000"
     environment:
       - DJANGO_DEBUG=1
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
     restart: always
