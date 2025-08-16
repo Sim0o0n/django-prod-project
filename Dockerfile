@@ -11,4 +11,4 @@ COPY mysite/ ./mysite/
 
 EXPOSE 8003
 
-CMD ["python", "mysite/manage.py", "runserver", "0.0.0.0:8003"]
+CMD ["python", "mysite/manage.py", "runserver", "0.0.0.0:8000"]
