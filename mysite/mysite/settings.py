@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
-import os
+
 from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -104,7 +103,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/DBNAME')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation
